@@ -1,0 +1,33 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Eclipse/IDEA/VSCode project files
+*.iml
+.idea/
+.project
+.classpath
+.settings/
+.vscode/
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Build output directories (if you use Maven/Gradle later)
+target/
+bin/
+out/
+
+# JARs or generated artifacts
+*.jar
+
+# Temporary files
+*.tmp
+
+# Optional: if you plan to store config outside version control
+config.properties
+
+Src/DB.Properties
