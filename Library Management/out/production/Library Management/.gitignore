@@ -1,0 +1,16 @@
+# Ignore compiled class files
+*.class
+
+# Ignore DB config if it contains sensitive info
+DB.Properties/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore build output
+out/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
