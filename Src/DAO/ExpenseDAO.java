@@ -140,4 +140,21 @@ public class ExpenseDAO {
         return expenses;
 
     }
+
+    public  Double TotalExpense(){
+        Double total=0.0;
+        try(Connection con=DriverManager.getConnection(URL,USER,PASSWORD)){
+            String sql="Select sum(TransactionAmount) as total from  expense";
+            Statement stmt =con.createStatement();
+            ResultSet rs= stmt.executeQuery(sql);
+            if(rs.next()){
+                total=rs.getDouble("total");
+            }else{
+                System.out.println("No Transaction till now");
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return total;
+    }
 }

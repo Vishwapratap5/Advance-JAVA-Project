@@ -27,6 +27,7 @@ public class ExpenseController {
             System.out.println("4. Display All Expense");
             System.out.println("5. Expense by ID");
             System.out.println("6. Expense by Date");
+            System.out.println("7. know Total Expense");
             System.out.println("Enter your choice: ");
             choice=sc.nextInt();
             sc.nextLine();
@@ -43,6 +44,8 @@ public class ExpenseController {
                 case 5:ExpenseController.DisplayExpense();
                 break;
                 case 6:ExpenseController.DisplayExpenseByDate();
+                break;
+                case 7: ExpenseController.DisplayTotalExpense();
                 break;
                 default:System.out.println("Invalid choice");
                 break;
@@ -136,6 +139,11 @@ public class ExpenseController {
         for (Expense expense : expenses) {
             System.out.println(expense);
         }
+    }
+
+    private static void DisplayTotalExpense() {
+        double totalExpense=expenseDAO.TotalExpense();
+        System.out.println("Your Total Expense is : RS "+totalExpense +" /-");
     }
 }
 
